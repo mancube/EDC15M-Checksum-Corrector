@@ -1,0 +1,22 @@
+# Firmware reads are not tracked. This repository holds the tool only.
+#
+# Supply a read of your own to test with - see "Checking it works" in README.md.
+*.bin
+*.Bin
+
+# NOTE: a full read with no file extension is not covered by the patterns
+# above, and naming it here would defeat the point.  Keep such files out with a
+# local-only exclusion in .git/info/exclude, which is never published.
+
+# Third-party binaries (a reference implementation, its plugin set and any
+# dongle driver) are not tracked.  Keep them out with a local-only exclusion in
+# .git/info/exclude, which is never published, rather than naming them here.
+
+# analysis scratch space
+.venv/
+__pycache__/
+*.pyc
+
+# output of tools/unaspack.py + tools/unpack_all.py (regenerate with:
+#   .venv/bin/python tools/unpack_all.py )
+unpacked/
